@@ -1291,6 +1291,17 @@ footer {
     font-weight: 900;
     letter-spacing: 2px;
 }
+/* Contact section ke button neeche lane ke liye */
+@media (max-width: 700px) {
+    .contact-section .btn.primary-btn,
+    .contact-section .whatsapp-btn {
+        display: block;
+        width: 90%;
+        max-width: 320px;
+        margin: 10px auto;
+        text-align: center;
+    }
+}
 /*WhatsApp Button - Yaha se start */
 .whatsapp-btn{
     background:#25D366;
@@ -1335,11 +1346,44 @@ footer {
         width: 280px;
         height: 280px;
     }
-/* ---------- MOBILE LEFT DRAWER ---------- */
-@media (max-width: 700px) {
-    .nav-container {
-        justify-content: space-between;
+/* --/* =========================================
+   DESKTOP + MOBILE SAME MENU
+   ========================================= */
+
+@media (max-width: 950px) {
+    
+    /* Menu button aur overlay chupao */
+    .menu-btn,
+    .close-btn,
+    .menu-overlay {
+        display: none !important;
     }
+
+    /* Nav ko normal kar do */
+    nav#navMenu {
+        position: static; /* fixed nahi rahega */
+        width: auto;
+        height: auto;
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+        flex-direction: row; /* laptop jaisa */
+        gap: 15px;
+        overflow: visible;
+        left: 0 !important;
+    }
+    
+    nav#navMenu a {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+    
+    .nav-container {
+        flex-wrap: wrap; /* Agar jagah kam ho to neeche aa jaye */
+        justify-content: center;
+        gap: 15px;
+    }
+}
 
     .brand-name {
         font-size: 20px;
