@@ -1357,7 +1357,7 @@ footer {
     .close-btn,
     .menu-overlay {
         display: none !important;
-    }
+    {
 
     /* Nav ko normal kar do */
     nav#navMenu {
@@ -1384,18 +1384,6 @@ footer {
         gap: 15px;
     }
 }
-
-    .brand-name {
-        font-size: 20px;
-    }
-
-    .menu-btn {
-        display: block;
-        order: -1;
-        background: #0878ff;
-        position: relative;
-        z-index: 1102;
-    }
 
     nav#navMenu {
         position: fixed;
