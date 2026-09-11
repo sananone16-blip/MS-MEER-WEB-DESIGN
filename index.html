@@ -46,7 +46,7 @@
             <a href="#services">Services</a>
 
             <a href="#about">About</a>
-
+            <a href="#impressions">Stats</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#reviews">Reviews</a>
             <a href="#prices">Prices</a>
@@ -307,7 +307,38 @@
     </div>
 
 </section>
+<!-- ================= IMPRESSIONS / STATS ================= -->
+<section id="impressions" class="section" style="background:#0878ff; color:#fff;">
+    <div class="container">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:30px; text-align:center;">
+            
+            <!-- STAT 1 -->
+            <div>
+                <h3 style="font-size:48px; font-weight:900; margin:0;">100+</h3>
+                <p style="font-size:16px; margin:5px 0 0 0;">Projects Completed</p>
+            </div>
 
+            <!-- STAT 2 -->
+            <div>
+                <h3 style="font-size:48px; font-weight:900; margin:0;">50+</h3>
+                <p style="font-size:16px; margin:5px 0 0 0;">Happy Clients</p>
+            </div>
+
+            <!-- STAT 3 -->
+            <div>
+                <h3 style="font-size:48px; font-weight:900; margin:0;">3+</h3>
+                <p style="font-size:16px; margin:5px 0 0 0;">Years Experience</p>
+            </div>
+
+            <!-- STAT 4 -->
+            <div>
+                <h3 style="font-size:48px; font-weight:900; margin:0;">24/7</h3>
+                <p style="font-size:16px; margin:5px 0 0 0;">Support</p>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 
 <!-- ================= PORTFOLIO ================= -->
@@ -837,6 +868,25 @@
 
 
 <script src="script.js"></script>
+<script>
+const counters = document.querySelectorAll('#impressions h3');
+const speed = 200;
 
+counters.forEach(counter => {
+    const updateCount = () => {
+        const target = +counter.innerText.replace('+','');
+        const count = +counter.innerText.replace('+','');
+        const inc = target / speed;
+
+        if(count < target){
+            counter.innerText = Math.ceil(count + inc) + '+';
+            setTimeout(updateCount, 10);
+        } else {
+            counter.innerText = target + '+';
+        }
+    }
+    updateCount();
+});
+</script>
 </body>
 </html>
