@@ -97,6 +97,40 @@ img {
 /* =========================================
    HEADER
    ========================================= */
+.white-text {
+  color: #007bff !important;
+}
+header {
+  text-align: center;
+  padding: 10px 0;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.menu a {
+  background: #f1f5f9;
+  color: #000;
+  padding: 8px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+.menu a:hover {
+  background: #007bff;
+  color: #fff;
+}
 body {
     padding-top: 120px; /* header ki height ke hisab se */
 }
@@ -172,7 +206,13 @@ nav a:hover {
 
     cursor: pointer;
 }
-
+/* Hero wale heading ko blue karo */
+.hero h1, .hero h2 {
+  color: #007bff !important; /* Blue color */
+}
+.hero h1 span, .hero h2 span {
+  color: #007bff !important; /* Agar span use kiya hai to */
+}
 
 /* =========================================
    HERO
