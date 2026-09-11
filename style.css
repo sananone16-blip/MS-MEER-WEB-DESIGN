@@ -1551,3 +1551,63 @@ footer {
         color: #fff;
     }
        }
+/* ========= MOBILE: 2 ROW MENU + STICKY HEADER ========= */
+@media (max-width: 600px) {
+    
+    /* 1. Drawer + Hamburger button khatam */
+    .menu-btn,
+    .close-btn,
+    .menu-overlay {
+        display: none !important;
+    }
+
+    /* 2. Header ko upar lock kar do */
+    header {
+        position: sticky; /* YE ZAROORI HAI */
+        top: 0;
+        z-index: 9999;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,.08);
+        padding: 8px 10px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .brand-name {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    /* 3. Menu ko 2 row grid bana do */
+    nav#navMenu {
+        position: static !important;
+        width: 100%;
+        height: auto;
+        background: transparent;
+        box-shadow: none;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* Pehli row 5 items */
+        grid-auto-rows: auto;
+        gap: 6px;
+        padding: 0;
+        left: 0 !important;
+    }
+    
+    /* 9 items hain to khud 2nd row ban jayegi: 5 + 4 */
+    nav#navMenu a {
+        font-size: 11px;
+        padding: 6px 4px;
+        background: #f1f5f9;
+        border-radius: 8px;
+        text-align: center;
+        white-space: nowrap;
+    }
+    
+    nav#navMenu a:hover {
+        background: #0878ff;
+        color: #fff;
+    }
+}
