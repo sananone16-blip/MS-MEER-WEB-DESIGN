@@ -86,9 +86,11 @@ img {
     transform: scale(1.1);
 }
 .container {
-    width: 90%;
+    width: 100%; /* 90% ko 100% karo */
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
+    padding: 0 15px; /* YE ADD KAREIN */
+    box-sizing: border-box;
 }
 
 
@@ -96,16 +98,16 @@ img {
    HEADER
    ========================================= */
 
-.header {
+header { /* .header se dot hatao */
     position: sticky;
     top: 0;
     z-index: 1000;
-
+    width: 100%; /* YE ADD KAREIN */
     background: rgba(255, 255, 255, 0.97);
-
-    box-shadow:
-        0 2px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
 }
+        
+
 
 
 .nav-container {
@@ -1609,5 +1611,33 @@ footer {
     nav#navMenu a:hover {
         background: #0878ff;
         color: #fff;
+    }
+}
+/* ========= FULL WIDTH FIX ========= */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* side scroll khatam */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; /* mobile pe 15px gap */
+    box-sizing: border-box;
+}
+
+/* Mobile pe container ka padding kam kar do */
+@media (max-width: 600px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    /* Cards ko bhi full karo */
+    .service-card, .portfolio-card {
+        width: 100%;
+        margin: 0;
     }
 }
