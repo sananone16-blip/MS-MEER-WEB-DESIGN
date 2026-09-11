@@ -48,6 +48,22 @@ img {
     background: #1ebe5d;
     transform:scale(1.05) ;
 }
+/* Contact Buttons Wrapper */
+.contact-buttons {
+    display: flex;
+    flex-direction: column; /* Mobile pe neeche */
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Desktop ke liye side by side */
+@media (min-width: 700px) {
+    .contact-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
 
 /* Floating WhatsApp Button*/
 .whatsapp-float{
