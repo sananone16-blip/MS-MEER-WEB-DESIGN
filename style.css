@@ -1,3 +1,4 @@
+
 /* =========================================
    MS MEER PROFESSIONAL WEBSITE
    ========================================= */
@@ -1449,3 +1450,49 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* ================= MOBILE ONLY 2 LINE MENU ================= */
+@media (max-width: 600px) {
+    
+    /* Menu button chupao */
+    .menu-btn,
+    .close-btn,
+    .menu-overlay {
+        display: none !important;
+    }
+
+    /* Logo upar, menu neeche */
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    /* Menu ko 2 line mein wrap karo */
+    nav#navMenu {
+        position: static !important;
+        width: 100%;
+        height: auto;
+        background: transparent;
+        box-shadow: none;
+        flex-direction: row;
+        flex-wrap: wrap; /* YE 2 LINE KAREGA */
+        justify-content: center;
+        gap: 8px;
+        padding: 0;
+        left: 0 !important;
+    }
+    
+    /* Har link pill button */
+    nav#navMenu a {
+        font-size: 12px;
+        padding: 6px 10px;
+        background: #f1f5f9;
+        border-radius: 15px;
+        white-space: nowrap;
+    }
+    
+    nav#navMenu a:hover {
+        background: #0878ff;
+        color: #fff;
+    }
+       }
