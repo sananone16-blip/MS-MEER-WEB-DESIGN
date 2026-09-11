@@ -1303,6 +1303,15 @@ footer {
     font-weight: 900;
     letter-spacing: 2px;
 }
+/* PRICING GRID */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* JO UPAR WALA PRICING CARD CSS DIYA THA WO YAHAN BHI RAHEGA */
 /* Contact section ke button neeche lane ke liye */
 @media (max-width: 700px) {
     .contact-section .btn.primary-btn,
@@ -1353,6 +1362,17 @@ footer {
     width: 90%;
     max-width: 1200px;
     margin: auto;
+}
+.btn-email {
+    background: #8b5cf6;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.btn-email:hover {
+    background: #7c3aed;
 }
  .about-logo-box {
         width: 280px;
