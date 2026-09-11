@@ -1306,6 +1306,98 @@ footer {
 
 
 /* JO UPAR WALA PRICING CARD CSS DIYA THA WO YAHAN BHI RAHEGA */
+/* PRICING CARD DARK PURPLE */
+.pricing-grid {
+  display: grid;
+  gap: 25px;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.pricing-card {
+  background: #0d0d0d;
+  border: 1px solid #8b5cf6;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.3);
+  color: #fff;
+}
+
+.pricing-card .tag {
+  color: #a78bfa;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.price-row h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin: 0;
+}
+.price-row .old {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 18px;
+}
+.price-row .off {
+  background: #4c1d95;
+  color: #c4b5fd;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+  border-top: 1px solid #222;
+  padding-top: 20px;
+}
+.features li {
+  margin-bottom: 12px;
+  color: #ccc;
+  font-size: 15px;
+}
+.features li::before {
+  content: "✓ ";
+  color: #8b5cf6;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* PURPLE BUTTON */
+.btn-order {
+  display: block;
+  text-align: center;
+  background: #8b5cf6;
+  color: #fff;
+  padding: 16px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 17px;
+  transition: 0.3s;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+.btn-order:hover {
+  background: #7c3aed;
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.7);
+}
 /* Contact section ke button neeche lane ke liye */
 @media (max-width: 700px) {
     .contact-section .btn.primary-btn,
