@@ -1948,3 +1948,55 @@ section {
   gap: 10px;
   padding: 0 10px;
 }
+/* ===== MOBILE ONLY - REVIEWS CHOTA ===== */
+@media (max-width: 600px) {
+
+  /* 1. Uper wala 5.0 box chota */
+  .rating-box, section:has(h2:contains("5.0")) {
+    padding: 15px 10px !important;
+    margin: 10px 5px !important;
+  }
+  
+  .rating-box h2, .rating-box .big {
+    font-size: 28px !important; /* 5.0 chota */
+  }
+  
+  .rating-box .stars {
+    font-size: 16px !important; /* stars chote */
+  }
+  
+  .rating-box p {
+    font-size: 12px !important; /* "MS MEER Rating" chota */
+  }
+
+  /* 2. Review Cards 2 ek line mein */
+  .reviews-container, .reviews-wrapper {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important; /* 2 cards */
+    gap: 8px !important;
+    padding: 0 8px !important;
+  }
+
+  .review-card, .testimonial {
+    padding: 10px !important; /* andar ka gap kam */
+    margin: 0 !important;
+  }
+
+  .review-card .stars {
+    font-size: 12px !important; /* stars bohot chote */
+  }
+
+  .review-card p, .review-text {
+    font-size: 12px !important; /* review text chota */
+    line-height: 1.3 !important;
+    margin: 5px 0 !important;
+  }
+
+  .review-card .name {
+    font-size: 13px !important; /* "Future Client" chota */
+    font-weight: 700 !important;
+  }
+
+  .review-card .title {
+    font-size: 10px !important; /* "Website Project" bohot chota */
+ 
