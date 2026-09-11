@@ -1897,3 +1897,54 @@ section {
   margin: 4px !important; /* pehle 8px hoga */
   padding: 7px 12px !important;
 }
+/* 5.0 rating box */
+.rating-box {
+  padding: 20px 10px !important; /* pehle 50px hoga */
+  margin: 15px auto !important;
+}
+
+.rating-box h2, .rating-box .big-number {
+  font-size: 36px !important; /* pehle 60px+ hoga */
+  margin: 0 !important;
+}
+
+.rating-box .stars {
+  font-size: 20px !important; /* stars chote */
+  margin: 5px 0 !important;
+}
+
+.rating-box p {
+  font-size: 14px !important; /* "MS MEER Rating" chota */
+}
+/* Review card */
+.review-card {
+  padding: 15px !important; /* pehle 30px hoga */
+  margin: 10px !important;
+  border-radius: 10px !important;
+}
+
+.review-card .stars {
+  font-size: 16px !important; /* stars chote */
+  margin-bottom: 8px !important;
+}
+
+.review-card .review-text {
+  font-size: 14px !important; /* review text chota */
+  line-height: 1.4 !important;
+  margin: 8px 0 !important;
+}
+
+.review-card .client-name {
+  font-size: 15px !important;
+  margin-top: 8px !important;
+}
+
+.review-card .project-name {
+  font-size: 12px !important;
+   }
+.reviews-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 cards ek line mein */
+  gap: 10px;
+  padding: 0 10px;
+}
