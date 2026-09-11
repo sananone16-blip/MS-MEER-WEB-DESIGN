@@ -1870,3 +1870,30 @@ header {
   display: inline-block;
   margin: 15px 0;
 }
+/* MS MEER heading ka margin kam karo */
+h2.logo, .brand-name {
+  margin: 10px 0 8px 0 !important;
+  padding: 0 !important;
+}
+
+/* Menu buttons ka margin kam karo */
+.menu, nav {
+  margin: 0 !important;
+  padding: 0 10px 10px 10px !important;
+}
+
+/* Hero section ke uper wala gap khatam */
+.hero {
+  padding-top: 10px !important;
+  margin-top: 0 !important;
+}
+
+/* Har section ke beech ka default margin khatam */
+section {
+  margin-top: 0 !important;
+  padding-top: 20px !important;
+}
+.menu a {
+  margin: 4px !important; /* pehle 8px hoga */
+  padding: 7px 12px !important;
+}
