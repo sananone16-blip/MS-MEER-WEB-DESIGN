@@ -1451,7 +1451,62 @@ footer {
     }
 }
 /* ================= MOBILE ONLY 2 LINE MENU ================= */
+/* ========= MOBILE HEADER LOCKED TOP ========= */
 @media (max-width: 600px) {
+    
+    /* Drawer + Button khatam */
+    .menu-btn,
+    .close-btn,
+    .menu-overlay {
+        display: none !important;
+    }
+
+    /* Header ko upar chipka do */
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: #fff;
+        box-shadow: 0 2px 10px rgba(0,0,0,.1);
+        padding: 8px 10px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .brand-name {
+        font-size: 20px;
+    }
+
+    /* Menu ko 2 line grid bana do */
+    nav#navMenu {
+        position: static !important;
+        width: 100%;
+        height: auto;
+        background: transparent;
+        box-shadow: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3-3-3 karke 3 line */
+        gap: 6px;
+        padding: 0;
+        left: 0 !important;
+    }
+    
+    nav#navMenu a {
+        font-size: 12px;
+        padding: 6px 5px;
+        background: #f1f5f9;
+        border-radius: 10px;
+        text-align: center;
+    }
+    
+    nav#navMenu a:hover {
+        background: #0878ff;
+        color: #fff;
+    }
+} {
     
     /* Menu button chupao */
     .menu-btn,
