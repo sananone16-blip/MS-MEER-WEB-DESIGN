@@ -97,13 +97,22 @@ img {
 /* =========================================
    HEADER
    ========================================= */
-
-header { /* .header se dot hatao */
-    position: sticky;
+body {
+    padding-top: 120px; /* header ki height ke hisab se */
+}
+@media (max-width: 600px) {
+    body {
+        padding-top: 140px; /* mobile pe 2 line menu hai is liye zyada */
+    }
+}
+header { 
+    position: fixed; /* sticky ki jagah fixed */
     top: 0;
-    z-index: 1000;
-    width: 100%; /* YE ADD KAREIN */
+    left: 0;
+    z-index: 9999;
+    width: 100%;
     background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(10px); /* thora glass effect */
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
 }
         
