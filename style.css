@@ -1310,7 +1310,85 @@ footer {
     gap: 25px;
     margin-top: 40px;
 }
+/* PRICING CARD DARK DESIGN */
+.pricing-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.pricing-card.featured {
+    border: 2px solid #8b5cf6;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+.pricing-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.pricing-header h3 {
+    font-size: 22px;
+    font-weight: 800;
+}
 
+/* PRICE WALA HISSA */
+.price {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.new-price {
+    font-size: 40px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+}
+.old-price-wrap {
+    display: flex;
+    flex-direction: column; /* IS SE OFF NEECHE AAYEGA */
+    gap: 5px;
+}
+.old-price {
+    font-size: 18px;
+    text-decoration: line-through;
+    color: #888;
+}
+.discount {
+    background: #7c3aed;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* FEATURES + BUTTON */
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+.pricing-features li {
+    margin-bottom: 10px;
+    color: #ccc;
+}
+.btn-order {
+    display: block;
+    text-align: center;
+    background: #8b5cf6;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+}
+.btn-order:hover {
+    background: #7c3aed;
+   }
 /* JO UPAR WALA PRICING CARD CSS DIYA THA WO YAHAN BHI RAHEGA */
 /* Contact section ke button neeche lane ke liye */
 @media (max-width: 700px) {
