@@ -1824,3 +1824,49 @@ body, html {
         margin: 0;
     }
 }
+/* Remove default margin and extra space */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  padding-top: 20px !important; /* pehle 80px hoga, kam kar do */
+  margin-top: 0 !important;
+}
+
+header {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+.menu a, nav a {
+  background: #007bff !important; /* Blue background */
+  color: #fff !important;         /* White text */
+  padding: 8px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.menu a:hover, nav a:hover {
+  background: #0056b3 !important; /* Dark blue on hover */
+  transform: translateY(-2px);
+}
+
+/* Email button jo white tha uske liye */
+.menu a[href*="mailto"] {
+  background: #007bff !important;
+  color: #fff !important;
+}
+.get-btn {
+  background: #007bff;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 800;
+  display: inline-block;
+  margin: 15px 0;
+}
