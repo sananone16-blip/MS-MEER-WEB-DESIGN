@@ -2262,3 +2262,28 @@ body {
     font-weight: 500;
   }
 }
+/* HEADER FIXED */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  z-index: 9999;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* BODY KO UPAR SE GAP DENA ZARURI HAI */
+body {
+  padding-top: 70px; /* mobile ke liye */
+  margin: 0;
+}
+
+/* MOBILE MENU - HIDE BY DEFAULT */
+#navMenu {
+  display: none;
+  flex-direction: column;
+  background: white;
+  position: absolute;
+  top:
