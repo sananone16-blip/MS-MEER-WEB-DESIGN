@@ -153,28 +153,51 @@ body {
         padding-top: 140px; /* mobile pe 2 line menu hai is liye zyada */
     }
 }
-header { 
-    position: fixed; /* sticky ki jagah fixed */
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.97);
-    backdrop-filter: blur(10px); /* thora glass effect */
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+
+/* LAPTOP MENU FIX 100% */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
-        
 
+/* Hero ko neeche dhakelne ke liye */
+.hero {
+  padding-top: 120px; /* header ki height + 30px extra */
+  text-align: center; /* "We Build Websites" center */
+}
 
-
-.nav-container {
-    min-height: 78px;
-
+/* Laptop menu items ko side by side */
+@media (min-width: 992px) {
+  .nav-container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  .menu-btn, .close-btn {
+    display: none; /* laptop pe button hide */
+  }
+  #navMenu {
+    display: flex !important;
+    gap: 30px;
+  }
+}@media (min-width: 992px) {
+  header .container {
+    display: flex;
+    justify-content: space-between; /* logo left, menu right */
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 30px;
+  }
 }
-
 
 .logo {
     width: 50px;
@@ -204,22 +227,7 @@ nav a:hover {
 }
 
 
-.menu-btn {
-    display: none;
 
-    border: none;
-    background: #0878ff;
-    color: white;
-
-    width: 42px;
-    height: 42px;
-
-    border-radius: 8px;
-
-    font-size: 22px;
-
-    cursor: pointer;
-}
 /* Hero wale heading ko blue karo */
 .hero h1, .hero h2 {
   color: #007bff !important; /* Blue color */
