@@ -2200,3 +2200,28 @@ section {
 #submitBtn:hover {
   background: #1d4ed8; /* dark blue on hover */
 }
+/* MENU KO CHIPKANE KE LIYE */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+body {
+  padding-top: 90px; /* header ki height */
+}
+
+/* LAPTOP PE SARE MENU LINKS DIKHANE KE LIYE */
+@media (min-width: 992px) {
+  .menu-btn, .close-btn {
+    display: none; /* button hide */
+  }
+  #navMenu {
+    display: flex !important; /* zaroori hai */
+    gap: 30px;
+  }
+}
