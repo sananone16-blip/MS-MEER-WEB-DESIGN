@@ -385,88 +385,137 @@
 </section>
 
 <!-- ================= REVIEWS ================= -->
-    <div style="font-size: 60%; padding: 10px;">
-  5.0 wala sara content yahan
-    </div>
-<section id="reviews" class="reviews-section">
-    <div class="container">
-        <p class="section-label">CLIENT FEEDBACK</p>
-        <h2>Reviews & Ratings</h2>
-        <p class="section-description">
-            A professional review area for future MS MEER clients.
-        </p>
-
-        <div class="rating-summary">
-            <div class="rating-score">
-                <strong>5.0</strong>
-                <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-                <span>MS MEER Rating</span>
-            </div>
-            <div class="rating-copy">
-                <h3>Quality Web Design</h3>
-                <p>
-                    Your feedback helps improve our design, development and
-                    customer experience.
-                </p>
-            </div>
-        </div>
-
-        <div class="reviews-grid">
-            <article class="review-card">
-                <div class="review-stars">★★★★★</div>
-                <p>“Professional design and a clean mobile-friendly layout.”</p>
-                <strong>Future Client</strong>
-                <span>Website Project</span>
-            </article>
-
-            <article class="review-card">
-                <div class="review-stars">★★★★★</div>
-                <p>“The portfolio presentation is modern, simple and easy to use.”</p>
-                <strong>Future Client</strong>
-                <span>Portfolio Project</span>
-            </article>
-
-            <article class="review-card">
-                <div class="review-stars">★★★★★</div>
-                <p>“Clear communication and a professional digital presence.”</p>
-                <strong>Future Client</strong>
-                <span>Business Project</span>
-            </article>
-        </div>
-        <section id="reviews" class="review-form-section">
+    <section id="reviews" class="review-form-section">
   <p class="small-heading">CLIENT FEEDBACK</p>
   <h2>Reviews & Ratings</h2>
   <p>Your feedback helps MS MEER improve its service.</p>
 
   <div class="review-box">
-    <!-- 5 Stars -->
-    <div class="star-rating">
-      <input type="radio" id="star5" name="rating" value="5" />
-      <label for="star5">★</label>
-      <input type="radio" id="star4" name="rating" value="4" />
-      <label for="star4">★</label>
-      <input type="radio" id="star3" name="rating" value="3" />
-      <label for="star3">★</label>
-      <input type="radio" id="star2" name="rating" value="2" />
-      <label for="star2">★</label>
-      <input type="radio" id="star1" name="rating" value="1" />
-      <label for="star1">★</label>
-    </div>
     <h3>Select a rating</h3>
-
-    <!-- Form -->
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <textarea placeholder="Write your review..." rows="4" required></textarea>
-      <button type="submit">Submit Review</button>
-    </form>
-  </div>
-        </section>
-        <div class="rating">
-  <span>5.0</span> ⭐⭐⭐⭐⭐ <span>MS MEER Rating</span>
-        </div>
+    
+    <!-- 1. STARS 1 LINE MEIN -->
+    <div class="stars">
+      <span data-value="1">★</span>
+      <span data-value="2">★</span>
+      <span data-value="3">★</span>
+      <span data-value="4">★</span>
+      <span data-value="5">★</span>
     </div>
+    <input type="hidden" id="rating-value" name="rating">
+
+    <!-- 2. FORM -->
+    <input type="text" id="name" placeholder="Your Name" required>
+    <textarea id="review" placeholder="Write your review..." rows="4" required></textarea>
+    <button id="submitBtn">Submit Review</button>
+  </div>
 </section>
+
+<style>
+/* ===== REVIEW FORM CSS ===== */
+.review-form-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f8f9fa;
+}
+.review-form-section .small-heading {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0;
+}
+.review-form-section h2 {
+  font-size: 28px;
+  margin: 5px 0 10px 0;
+}
+
+.review-box {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 30px 20px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* STARS 1 LINE MEIN + YELLOW ON CLICK */
+.stars {
+  display: flex; /* 1 line mein */
+  justify-content: center;
+  gap: 10px;
+  font-size: 45px;
+  margin: 10px 0 15px 0;
+}
+.stars span {
+  color: #ddd; /* grey */
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.stars span.active,
+.stars span:hover {
+  color: #FFD700; /* yellow */
+}
+
+/* INPUTS */
+.review-box input, .review-box textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+/* BLUE SUBMIT BUTTON */
+#submitBtn {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  background: #2563eb; /* BLUE */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#submitBtn:hover {
+  background: #1d4ed8; /* DARK BLUE */
+}
+</style>
+
+<script>
+// STARS CLICK PE YELLOW HONAY KA CODE
+const stars = document.querySelectorAll('.stars span');
+const ratingInput = document.getElementById('rating-value');
+
+stars.forEach((star, idx) => {
+  star.addEventListener('click', () => {
+    ratingInput.value = idx + 1; // 1 to 5 value save
+    stars.forEach((s, i) => {
+      s.classList.toggle('active', i <= idx); // jitne click kiye sab yellow
+    });
+  });
+});
+
+// SUBMIT BUTTON
+document.getElementById('submitBtn').addEventListener('click', () => {
+  const name = document.getElementById('name').value;
+  const review = document.getElementById('review').value;
+  const rating = ratingInput.value;
+  
+  if(!rating || !name || !review) {
+    alert("Please fill all fields and select rating");
+    return;
+  }
+  
+  alert("Thank you " + name + "! Your " + rating + " star review submitted.");
+  // Yahan aap WhatsApp/Email ka link laga sakte hain
+});
+</script>
 
 <!-- ================= WHY CHOOSE US ================= -->
 
