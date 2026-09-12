@@ -2267,3 +2267,59 @@ body {
   text-align: center;
   padding: 60px 20px;
   background: #f8f9fa;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  padding-top: 140px;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+.header {
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 9999;
+  padding: 15px 0;
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-name {
+  font-size: 28px; font-weight: 800; 
+  color: #000; text-decoration: none;
+}
+
+#navMenu { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+#navMenu a {
+  background: #007bff; color: white; padding: 10px 18px;
+  border-radius: 8px; text-decoration: none; font-weight: 600;
+}
+
+.hero { text-align: center; padding: 60px 20px; }
+.hero h1 { font-size: 34px; color: #007bff; margin-bottom: 15px; }
+.hero p { font-size: 18px; color: #555; margin-bottom: 25px; }
+
+.btn-main {
+  background: #007bff; color: white; padding: 15px 40px;
+  border-radius: 50px; text-decoration: none; font-weight: 700;
+  display: inline-block;
+}
+
+/* LAPTOP */
+@media (min-width: 992px) {
+  body { padding-top: 80px; }
+  .nav-container { flex-direction: row; justify-content: space-between; }
+  #navMenu a { background: transparent; color: #333; padding: 0; }
+  #navMenu a:hover { color: #007bff; }
+  .hero h1 { font-size: 48px; }
+}
