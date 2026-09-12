@@ -100,6 +100,20 @@ img {
 .white-text {
   color: #007bff !important;
 }
+/* HEADER FIX - SCROLL KE SATH NECHE NA AAYE */
+header {
+  position: fixed;   /* sticky ki jagah fixed */
+  top: 0;
+  left: 0;
+  width: 100%;       /* puri width le */
+  z-index: 9999;     /* sab se upar */
+  background: white; /* background warna transparent hoga */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* BODY KO UPAR SE GAP DO warna header content ke upar aa jayega */
+body {
+  padding-top: 80px; /* header ki height jitni hai utni. 60px se 
 header {
   text-align: center;
   padding: 10px 0;
