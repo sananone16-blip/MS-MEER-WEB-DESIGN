@@ -2123,3 +2123,58 @@ section {
   margin-top: 10px;
 }
 .review-box button:hover { background: #1f2937; }
+/* STARS 1 LINE MEIN + CLICK PE YELLOW */
+.review-box {
+  max-width: 450px;
+  margin: 20px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.stars {
+  display: flex; /* 1 line mein laane ke liye */
+  justify-content: center;
+  gap: 8px;
+  font-size: 40px;
+  margin: 10px 0 20px 0;
+}
+.stars span {
+  color: #ddd; /* grey star */
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.stars span.active,
+.stars span:hover {
+  color: #FFD700; /* yellow on hover/click */
+}
+
+/* INPUTS */
+.review-box input, .review-box textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+/* BLUE SUBMIT BUTTON */
+#submitBtn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  background: #2563eb; /* BLUE BUTTON */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#submitBtn:hover {
+  background: #1d4ed8; /* dark blue on hover */
+}
