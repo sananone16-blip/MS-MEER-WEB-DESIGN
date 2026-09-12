@@ -1547,7 +1547,7 @@ footer {
 
     /* Nav ko normal kar do */
     nav#navMenu {
-        position: static; /* fixed nahi rahega */
+        position: sticky; /* fixed nahi rahega */
         width: auto;
         height: auto;
         padding: 0;
